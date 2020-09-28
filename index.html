@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-green lighten-5">
+    <!-- Main container -->
+    <div class="container light-green lighten-5">
+      <h3 class="center-align">Book List App</h3>
+
+      <div id="alert" class="row"></div>
+      
+        <form id="input-form" class="col s12">
+          <div class="row">
+            <div class="input-field col s12 m10 l6 offset-m1 offset-l3">
+              <i class="material-icons prefix">title</i>
+              <input id="title" type="text" />
+              <label for="title">Title</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m10 l6 offset-m1 offset-l3">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="author" type="text" />
+              <label for="author">Author</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m10 l6 offset-m1 offset-l3">
+              <i class="material-icons prefix">library_books</i>
+              <input id="isbn" type="text" />
+              <label for="isbn">ISBN</label>
+            </div>
+          </div>
+
+          <div class="row center-align">
+            <button class="btn waves-effect waves-light teal lighten-1" type="submit">Submit
+              <i class="material-icons right">send</i>
+            </button>    
+            <a class="waves-effect waves-light btn red lighten-2" id="clear-btn"><i class="material-icons right">delete</i>Clear</a>     
+          </div>
+        </form>
+  
+
+      <div class="row">
+        <table class="centered col s12 m10 l8 offset-m1 offset-l2">
+          <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+          </table>
+      </div>
+    </div>
+    <!-- Main container -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
